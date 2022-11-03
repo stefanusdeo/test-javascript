@@ -57,7 +57,11 @@ const count_huruf = (kalimat) => {
       obj[val] = i;
     }
   });
-  return obj;
+
+  let result = Object.keys(obj).map(
+    (key) => `${String(key)}: ${Number(obj[key])}`
+  );
+  return result;
 };
 
 console.log(count_huruf("MasyaAllah"));
